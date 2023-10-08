@@ -3,14 +3,14 @@
 <ul class="sidebar-nav" id="sidebar-nav">
 
   <li class="nav-item">
-    <a class="nav-link " href="#">
+    <a class="nav-link " href="{{route('dashboard')}}">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+    <a class="nav-link collapsed" href="{{route('subject.list')}}">
       <i class="bi bi-menu-button-wide"></i><span>Subjects</span>
     </a>
   </li><!-- End subjects Nav -->  

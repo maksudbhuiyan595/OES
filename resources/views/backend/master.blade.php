@@ -25,7 +25,8 @@
   <link href="{{asset('ui/backend')}}/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="{{asset('ui/backend')}}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="{{asset('ui/backend')}}/assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
+<!-- toastr -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
   <!-- Template Main CSS File -->
   <link href="{{asset('ui/backend')}}/assets/css/style.css" rel="stylesheet">
 
@@ -41,27 +42,28 @@
 <body>
 
   <!-- ======= Header ======= -->
- @include('backend.layoutes.includes.navbar')
+ @include('backend.layouts.includes.navbar')
   <!-- ======= Sidebar ======= -->
  
-@include('backend.layoutes.includes.sidebar')
+@include('backend.layouts.includes.sidebar')
   <main id="main" class="main">
 
     <div class="pagetitle">
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
+      <hr>
     </div><!-- End Page Title -->
 
    @yield('content')
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
- @include('backend.layoutes.includes.footer')
+ @include('backend.layouts.includes.footer')
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -77,6 +79,10 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('ui/backend')}}/assets/js/main.js"></script>
+  <!-- toastr -->
+  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
 
 </body>
 
