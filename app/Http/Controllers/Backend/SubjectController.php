@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class SubjectController extends Controller
 {
     public function list(){
-        $subjects=Subject::all();
+        $subjects=Subject::orderBy('created_at', 'desc')->paginate(4);
         return view('backend.layouts.pages.subjects.list',compact('subjects'));
     }
     public function create(){
@@ -19,7 +19,7 @@ class SubjectController extends Controller
     public function store(Request $request){
         // dd($request->all());
         $request->validate([
-            'name'=>'required|max:200|min:1',
+            'name'=>'required',
             'image'=>'required|image|mimes:png,jpg,svg,jpeg',
         ]);
         if($request->hasFile('image')){

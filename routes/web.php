@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\LevelController;
 use App\Http\Controllers\Backend\SubjectController;
 use App\Http\Controllers\ProfileController;
 use GuzzleHttp\Middleware;
@@ -44,6 +45,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/subject/edit/{id}',[SubjectController::class, 'edit'])->name('subject.edit');
     Route::post('/subject/update/{id}',[SubjectController::class, 'update'])->name('subject.update');
     Route::get('/subject/delete/{id}',[SubjectController::class, 'destroy'])->name('subject.destroy');
+
+    //Levelcontroller
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
 });
 
 require __DIR__.'/auth.php';
