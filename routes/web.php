@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\LevelController;
+use App\Http\Controllers\Backend\MakeQuestionController;
 use App\Http\Controllers\Backend\SubjectController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -44,6 +45,15 @@ Route::middleware('auth')->group(function () {
     Route::get('level/edit/{id}',[LevelController::class,'edit'])->name('level.edit');
     Route::post('level/update/{id}',[LevelController::class,'update'])->name('level.update');
     Route::get('level/delete/{id}',[LevelController::class,'destroy'])->name('level.destroy');
+
+    //MakeQuestionController
+    Route::get('question/list',[MakeQuestionController::class,'list'])->name('question.list');
+    Route::get('question/create',[MakeQuestionController::class,'create'])->name('question.create');
+    Route::post('question/store',[MakeQuestionController::class,'store'])->name('question.store');
+    Route::get('question/view/{id}',[MakeQuestionController::class,'view'])->name('question.view');
+    Route::get('question/edit/{id}',[MakeQuestionController::class,'edit'])->name('question.edit');
+    Route::post('question/update/{id}',[MakeQuestionController::class,'update'])->name('question.update');
+    Route::get('question/delete/{id}',[MakeQuestionController::class,'destroy'])->name('question.destroy');
 });
 
 require __DIR__.'/auth.php';

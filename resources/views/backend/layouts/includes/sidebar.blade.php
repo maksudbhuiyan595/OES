@@ -21,6 +21,12 @@
     </a>
   </li><!-- End Levels Nav -->
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="{{route('question.list')}}">
+      <i class="bi bi-menu-button-wide"></i><span>Make Questions</span>
+    </a>
+  </li><!-- End question Nav -->
+
   
 
 </ul>
