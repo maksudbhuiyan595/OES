@@ -16,8 +16,8 @@
   </li><!-- End subjects Nav -->  
   
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-menu-button-wide"></i><span>Levles</span>
+    <a class="nav-link collapsed" href="{{route('level.list')}}">
+      <i class="bi bi-menu-button-wide"></i><span>Levels</span>
     </a>
   </li><!-- End Levels Nav -->
 

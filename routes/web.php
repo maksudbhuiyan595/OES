@@ -48,12 +48,12 @@ Route::middleware('auth')->group(function () {
 
     //Levelcontroller
     Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
-    Route::get('level/list',[LevelController::class,'list'])->name('level.list');
+    Route::get('level/create',[LevelController::class,'create'])->name('level.create');
+    Route::post('level/store',[LevelController::class,'store'])->name('level.store');
+    Route::get('level/view/{id}',[LevelController::class,'view'])->name('level.view');
+    Route::get('level/edit/{id}',[LevelController::class,'edit'])->name('level.edit');
+    Route::post('level/update/{id}',[LevelController::class,'update'])->name('level.update');
+    Route::get('level/delete/{id}',[LevelController::class,'destroy'])->name('level.destroy');
 });
 
 require __DIR__.'/auth.php';

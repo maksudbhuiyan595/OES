@@ -22,7 +22,7 @@
                         @foreach ($subjects as $id=>$subject)
                             <tr>
                                 <td>{{++$id}}</td>
-                                <td>{{++$subject->name}}</td>
+                                <td>{{$subject->name}}</td>
                                 <td>
                                     <img  style="height: 60px; width: 60px; ;"
                                     src="{{url('/uploads/subjects/',$subject->image)}}" alt="image">
