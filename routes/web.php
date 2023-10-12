@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
-Route::get('/subject/exam/{suject_id}',[HomeController::class, 'SubjectExam'])->name('subject.exam');
+Route::get('/all-exam/list/{suject_id}',[HomeController::class, 'allExamList'])->name('all.exam.list');
 
 
 Route::middleware('auth')->group(function () {

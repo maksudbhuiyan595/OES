@@ -10,8 +10,8 @@
                 <div class="card-body">
                     <img style="height: 60px; width: 60px; ;" src="{{url('/uploads/subjects/',$subject->image)}}" alt="image">
                     <hr>
-                    <span>{{$subject->name}}</span>
-                  
+                    <span>{{$subject->name}}</span><br>
+                  <a class="" href="{{route('all.exam.list',$subject->id)}}">See More</a>
                 </div>
             </div>
         </div>
