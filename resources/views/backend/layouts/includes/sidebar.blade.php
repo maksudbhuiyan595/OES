@@ -27,6 +27,12 @@
     </a>
   </li><!-- End question Nav -->
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="{{route('exam.list')}}">
+      <i class="bi bi-menu-button-wide"></i><span>Exams</span>
+    </a>
+  </li><!-- End Exams Nav -->
+
   
 
 </ul>

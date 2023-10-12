@@ -19,7 +19,7 @@
                                             @forelse ($subjects as $subject)
                                             <option value="{{$subject->id}}">{{$subject->name}}</option>   
                                             @empty
-                                                {{ "Subject not found--"}}
+                                                
                                             @endforelse
                                         </select>
                                              @error('subject_id')

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\ExamController;
 use App\Http\Controllers\Backend\LevelController;
 use App\Http\Controllers\Backend\MakeQuestionController;
 use App\Http\Controllers\Backend\SubjectController;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
-Route::get('/subjects',[HomeController::class, 'subject'])->name('subject');
+Route::get('/subject/exam/{suject_id}',[HomeController::class, 'SubjectExam'])->name('subject.exam');
 
 
 Route::middleware('auth')->group(function () {
@@ -54,6 +55,16 @@ Route::middleware('auth')->group(function () {
     Route::get('question/edit/{id}',[MakeQuestionController::class,'edit'])->name('question.edit');
     Route::post('question/update/{id}',[MakeQuestionController::class,'update'])->name('question.update');
     Route::get('question/delete/{id}',[MakeQuestionController::class,'destroy'])->name('question.destroy');
+    
+    
+    //ExamController
+    Route::get('exam/list',[ExamController::class,'list'])->name('exam.list');
+    Route::get('exam/create',[ExamController::class,'create'])->name('exam.create');
+    Route::post('exam/store',[ExamController::class,'store'])->name('exam.store');
+    Route::get('exam/view/{id}',[ExamController::class,'view'])->name('exam.view');
+    Route::get('exam/edit/{id}',[ExamController::class,'edit'])->name('exam.edit');
+    Route::post('exam/update/{id}',[ExamController::class,'update'])->name('exam.update');
+    Route::get('exam/delete/{id}',[ExamController::class,'destroy'])->name('exam.destroy');
 });
 
 require __DIR__.'/auth.php';
